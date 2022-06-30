@@ -1,11 +1,11 @@
 import Comments from './Comments';
 
-function Post() {
+function Post(props) {
 	return (
 		<div>
-			<h4></h4>
-			<h3></h3>
-			<p></p>
+			<h4>{props.title}</h4>
+			<h3>{props.name}</h3>
+			<p>{props.text}</p>
 			<Comments />
 		</div>
 	);
