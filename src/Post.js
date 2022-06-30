@@ -3,12 +3,13 @@ import Comments from './Comments';
 function Post(props) {
 	return (
 		<div>
-			<h4>{props.title}</h4>
-			<h3>{props.name}</h3>
-			<p>{props.text}</p>
-			<Comments />
+			<section class = "post">
+			    <h6>Posted by {props.name}</h6>
+				<h4>{props.title}</h4>
+				<p>{props.text}</p>
+			</section>
 		</div>
 	);
 }
-
+/* <Comments />*/
 export default Post;

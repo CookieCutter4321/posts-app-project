@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*Post styling (h4,h3,p)*/
+
+.post {
+  border: 2px solid grey;
+}
