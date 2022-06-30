@@ -12,8 +12,19 @@ code {
     monospace;
 }
 
-/*Post styling (h4,h3,p)*/
+/*Post styling*/
 
 .post {
   border: 2px solid grey;
 }
+
+
+/*Form submit styling */
+form {
+  text-align: center;
+}
+
+textarea {
+  vertical-align: top;
+}
+
