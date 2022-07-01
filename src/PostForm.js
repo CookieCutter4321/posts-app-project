@@ -1,6 +1,9 @@
-function PostForm() {
+function PostForm(props) { //props.add(name,title,text)
 	const onClick = () => {
-		console.log("Clicked!")
+		const n = document.getElementById("name_"+unique_id).value;
+		const title = document.getElementById("title"+unique_id).value;
+		const text = document.getElementById("text"+unique_id).value;
+		props.add(n,title,text);
 	}
 	const unique_id = Math.random().toString(16).slice(2) //generate unique ID
 

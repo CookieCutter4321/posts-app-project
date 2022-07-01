@@ -16,6 +16,9 @@ function App() {
 	]);
 
 	const addPost = (name, title, text) => {
+
+		console.log(name, title, text);
+		/*
 		if (name.trim().isEmpty() || title.trim().isEmpty() || text.trim().isEmpty()) {
 			alert('invalid');
 		} else {
@@ -24,7 +27,7 @@ function App() {
 				name: name,
 				text: text
 			}])
-		}
+		}*/
 	}
 	return (
 		<div className='App'>
