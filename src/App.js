@@ -19,7 +19,7 @@ function App() {
 
 		console.log(name, title, text);
 		/*
-		if (name.trim().isEmpty() || title.trim().isEmpty() || text.trim().isEmpty()) {
+		if (name.trim() && title.trim() && text.trim()) { //check if truthy values
 			alert('invalid');
 		} else {
 			setPosts([...posts, {
