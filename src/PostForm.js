@@ -1,11 +1,9 @@
 function PostForm(props) { //props.add(name,title,text)
-	const onClick = async () => {
+	const onClick = () => {
 		const n = document.getElementById("name_"+unique_id).value;
 		const title = document.getElementById("title"+unique_id).value;
 		const text = document.getElementById("text"+unique_id).value;
-		await props.add(n,title,text); //wait until its added
-
-		document.getElementById("submit_form").reset();
+		props.add(n,title,text); //wait until its added
 	}
 
 	const unique_id = Math.random().toString(16).slice(2) //generate unique ID

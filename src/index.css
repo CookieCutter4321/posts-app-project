@@ -16,15 +16,16 @@ code {
 
 .post {
   border: 2px solid grey;
+  width: 70%;
 }
 
 
-/*Form submit styling */
-form {
+/*Post Form submit styling */
+#submit_form {
   text-align: center;
 }
 
-textarea {
+#submit_form > textarea {
   vertical-align: top;
 }
 

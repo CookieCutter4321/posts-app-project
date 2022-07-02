@@ -15,19 +15,18 @@ function App() {
 		}
 	]);
 
-	const addPost = (name, title, text) => {
+	const addPost = async (name, title, text) => {
 
-		console.log(name, title, text);
-		/*
 		if (name.trim() && title.trim() && text.trim()) { //check if truthy values
-			alert('invalid');
-		} else {
-			setPosts([...posts, {
+			await setPosts([...posts, {
 				title: title,
 				name: name,
 				text: text
 			}])
-		}*/
+			document.getElementById("submit_form").reset();
+		} else {
+			alert("Please fill in the required fields.")
+		}
 	}
 	return (
 		<div className='App'>
