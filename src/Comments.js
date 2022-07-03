@@ -3,18 +3,9 @@ import CommentForm from './CommentForm';
 import Comment from './Comment.js';
 
 function Comments() {
-	const [comments, setComments] = useState([
-		{
-			/*
-			title: "Example title1",
-			name: "Example name1",
-			text: "Example text"
-			id: "123456"*/
-		}
+	const [comments, setComments] = useState([]);
 
-	]);
-
-	const addComments = (name,title,text,id, post_id) => {
+	const addComments = (name,title,text,id,parent_id) => {
 		if (name.trim() && title.trim() && text.trim()) { //check if truthy values
 			    setComments([...comments, {
 				title: title,
@@ -22,14 +13,14 @@ function Comments() {
 				text: text,
 				id: id
 			}])
-			document.getElementById("post_id").reset();
+			document.getElementById("submit_form").reset();
 		} else {
 			alert("Please fill in the required fields.")
 		}
 	}
 	return (
 		<div>
-			<CommentForm addComments = {addComments}/> 
+			<CommentForm /> 
 			<div>
 				{comments.map(comment => (
 					<Comment />

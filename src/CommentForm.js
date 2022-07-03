@@ -1,6 +1,5 @@
 function CommentForm(props) {
-
-	/*
+	
 	const onClick = async () => {
 		const n = document.getElementById("name").value;
 		const title = document.getElementById("title").value;
@@ -8,7 +7,7 @@ function CommentForm(props) {
 		await props.add(n,title,text, unique_id); //wait until its added
 
 		unique_id = Math.random().toString(16).slice(2) //regenerate ID
-	}*/
+	}
 
 	const unique_form_id = Math.random().toString(16).slice(2) //generate unique ID
 	let unique_id = Math.random().toString(16).slice(2) //generate unique ID for comment
