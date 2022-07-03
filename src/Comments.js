@@ -14,7 +14,7 @@ function Comments() {
 
 	]);
 
-	const addComments = (name,title,text,id,parent_id) => {
+	const addComments = (name,title,text,id, post_id) => {
 		if (name.trim() && title.trim() && text.trim()) { //check if truthy values
 			    setComments([...comments, {
 				title: title,
@@ -22,14 +22,14 @@ function Comments() {
 				text: text,
 				id: id
 			}])
-			document.getElementById("submit_form").reset();
+			document.getElementById("post_id").reset();
 		} else {
 			alert("Please fill in the required fields.")
 		}
 	}
 	return (
 		<div>
-			<CommentForm /> 
+			<CommentForm addComments = {addComments}/> 
 			<div>
 				{comments.map(comment => (
 					<Comment />
