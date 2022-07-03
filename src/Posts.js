@@ -8,7 +8,7 @@ function Posts({posts, addPost}) {
 			<PostForm add = {addPost}/>
 			<div>
 				{posts.map(post => (
-					<Post title = {post.title} name = {post.name} text = {post.text}/>
+					<Post title = {post.title} name = {post.name} text = {post.text} id = {post.id}/>
 				))}
 			</div>
 		</div>
