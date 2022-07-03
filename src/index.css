@@ -29,3 +29,16 @@ code {
   vertical-align: top;
 }
 
+/* comment styling */
+
+.comment {
+  left:50%;
+  border: 2px solid green;
+}
+
+/* comment form styling*/
+
+.comment_form {
+  background-color: wheat;
+  width:50%;
+}
