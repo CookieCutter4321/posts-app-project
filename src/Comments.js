@@ -3,27 +3,26 @@ import CommentForm from './CommentForm';
 import Comment from './Comment.js';
 
 function Comments() {
-	const [comments, setComments] = useState([]);
+	const [comments, setComments] = useState([]); // MUST be empty or else infinite recursion will occur.
 
-	const addComments = (name,title,text,id,parent_id) => {
-		if (name.trim() && title.trim() && text.trim()) { //check if truthy values
+	const addComments = (name,text,id,post_id) => {
+		if (name.trim() && text.trim()) { //check if truthy values
 			    setComments([...comments, {
-				title: title,
 				name: name,
 				text: text,
 				id: id
 			}])
-			document.getElementById("submit_form").reset();
+			document.getElementById(post_id).reset();
 		} else {
 			alert("Please fill in the required fields.")
 		}
 	}
 	return (
 		<div>
-			<CommentForm /> 
+			<CommentForm addComments = {addComments} /> 
 			<div>
 				{comments.map(comment => (
-					<Comment />
+					<Comment name={comment.name} text = {comment.text} id = {comment.id}/>
 				))}
 			</div>
 		</div>

@@ -1,10 +1,9 @@
 function CommentForm(props) {
-	
+
 	const onClick = async () => {
-		const n = document.getElementById("name").value;
-		const title = document.getElementById("title").value;
-		const text = document.getElementById("text").value;
-		await props.add(n,title,text, unique_id); //wait until its added
+		const n = document.getElementById("name"+unique_form_id).value;
+		const text = document.getElementById("text"+unique_form_id).value;
+		await props.addComments(n,text, unique_id,unique_form_id); //wait until its added
 
 		unique_id = Math.random().toString(16).slice(2) //regenerate ID
 	}
@@ -14,9 +13,9 @@ function CommentForm(props) {
 
 	return (
 		<form id = {unique_form_id}>
-			<input name='name' type='text' placeholder='Name' />
-			<textarea name='text' cols='30' rows='10' placeholder='Text'></textarea>
-			<button type='button'>Submit</button>
+			<input id = {"name" + unique_form_id} name='name' type='text' placeholder='Name' />
+			<textarea id = {"text" + unique_form_id} name='text' cols='30' rows='10' placeholder='Text'></textarea>
+			<button id = {"submit" + unique_form_id} type='button' onClick = {onClick}>Submit</button>
 		</form>
 	);
 }
