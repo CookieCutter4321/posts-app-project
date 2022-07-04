@@ -12,7 +12,9 @@ function CommentForm(props) {
 	let unique_id = Math.random().toString(16).slice(2) //generate unique ID for comment
 
 	return (
-		<form class = "comment_form" id = {unique_form_id}>
+		<form class = "comment_form" 
+			  id = {unique_form_id}
+			  style = {{marginLeft: (props.depth-1)*5 + "%"}}>
 			<input id = {"name" + unique_form_id} name='name' type='text' placeholder='Name' />
 			<textarea id = {"text" + unique_form_id} name='text' cols='30' rows='10' placeholder='Text'></textarea>
 			<button id = {"submit" + unique_form_id} type='button' onClick = {onClick}>Submit</button>

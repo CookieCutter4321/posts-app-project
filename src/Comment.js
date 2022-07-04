@@ -1,14 +1,22 @@
 import Comments from './Comments';
 
 function Comment(props) {
+
+	<style> 
+	</style>
+
 	return (
 		<div>
-			<section class = "comment" id = {props.id}>
+			<section class = "comment" 
+			         id = {props.id}
+					 style={{
+						 marginLeft: props.depth*5 + "%"
+					 }}>
 			    <h6>Posted by {props.name}</h6>
 				<p>{props.text}</p>
 			</section>
 
-			<Comments />
+			<Comments depth = {props.depth+1}/>
 		</div>
 	);
 }

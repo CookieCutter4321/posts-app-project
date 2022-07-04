@@ -38,8 +38,8 @@ code {
 /* comment styling */
 
 .comment {
-  left:50%;
   border: 2px solid green;
+  width: 50%;
 }
 
 /* comment form styling*/
