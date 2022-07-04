@@ -27,6 +27,7 @@ function App() {
 	}
 	return (
 		<div className='App'>
+			<h1 id = "title">Example Posts App</h1>
 			<Posts 
 			posts = {posts} 
 			addPost = {addPost}/>
