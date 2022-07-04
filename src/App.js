@@ -12,13 +12,14 @@ function App() {
 	]);
 
 	const addPost = async (name, title, text, id) => {
+		console.log("added")
 
 		if (name.trim() && title.trim() && text.trim()) { //check if truthy values
 			await setPosts([...posts, {
 				title: title,
 				name: name,
 				text: text,
-				id: id
+				id: id,
 			}])
 			document.getElementById("submit_form").reset();
 		} else {
